@@ -64,7 +64,7 @@ namespace MSTestOverview
 
             Debug.WriteLine("Hello TestAlarmsIsLaunchingSuccessfully!");
 
-            Assert.AreEqual("Alarms & Clock", sessionAlarms.Title, false,
+            Assert.AreEqual("Clock", sessionAlarms.Title, false,
                 $"Actual title doesn't match expected title: {sessionAlarms.Title}");
         }
 
@@ -87,7 +87,7 @@ namespace MSTestOverview
 
             System.Threading.Thread.Sleep(3000); 
 
-            var listClock  = sessionAlarms.FindElementByAccessibilityId("ClockCardListView");
+            var listClock  = sessionAlarms.FindElementByAccessibilityId("ClockDetailListView");
 
             var clockItems = listClock.FindElementsByTagName("ListItem");
             
